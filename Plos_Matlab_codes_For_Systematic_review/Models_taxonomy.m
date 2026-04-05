@@ -35,12 +35,12 @@ end
 % Add legend with full labels and percentages (rounded to whole numbers)
 legend_labels2 = {sprintf('Deterministic (23, %d%%)', round((23/43)*100)), ...
                   sprintf('Stochastic (17, %d%%)', round((17/43)*100)), ...
-                  sprintf('Hybrid (3, %d%%)', round((3/43)*100))};
+                  sprintf(' Comparative (DM-SD) (3, %d%%)', round((3/43)*100))};
 legend(legend_labels2, 'Location', 'eastoutside', 'FontSize', 10, 'FontWeight', 'bold');
 
 % Pie chart 3: Population Structure
 subplot(1, 3, 3);
-population_data = [15, 28];
+population_data = [14, 29];
 h3 = pie(population_data);
 title(' (c) Population Structure', 'FontSize', 14, 'FontWeight', 'bold');
 
@@ -51,8 +51,8 @@ for i = 1:length(p3)
 end
 
 % Add legend with full labels and percentages (rounded to whole numbers)
-legend_labels3 = {sprintf('Flat (15, %d%%)', round((15/43)*100)), ...
-                  sprintf('Age-Structured (28, %d%%)', round((28/43)*100))};
+legend_labels3 = {sprintf('Flat (14, %d%%)', round((14/43)*100)), ...
+                  sprintf('Age-Structured (29, %d%%)', round((29/43)*100))};
 legend(legend_labels3, 'Location', 'eastoutside', 'FontSize', 10, 'FontWeight', 'bold');
 
 % Add overall title
