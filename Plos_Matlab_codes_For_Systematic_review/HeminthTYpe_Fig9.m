@@ -1,21 +1,20 @@
-% Helminth species studied - Publication quality figure
+% Helminth species studied
 
 clear; clc; close all;
 
-% Data from the table
-species = {'H','R','RH','RHW','RHWS','S','W'};
-counts = [12 4 5 16 1 2 1];
-percentages = [29 7 12 40 2 5 5];
+species = {'H','R','RH','RHW','RHWS','S','W','Other'};
+counts = [10 3 5 17 1 1 1 4];
+
+percentages = round((counts/42)*100);
 
 data = [counts' percentages'];
 
 % Create figure
-figure('Units','inches','Position',[2 2 6 4],'Color','white');
+figure('Units','inches','Position',[2 2 7 4.5],'Color','white');
 
 % Horizontal grouped bar chart
 b = barh(data,'grouped','BarWidth',0.7);
 
-% Optional colors (journal friendly)
 b(1).FaceColor = [0.2 0.6 0.9];   % blue
 b(2).FaceColor = [0.9 0.4 0.1];   % orange
 
